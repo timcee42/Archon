@@ -1,0 +1,323 @@
+# EUC Assessment Agent Team - Detailed Task List
+
+## Phase 1: Foundation & Core Setup (1-2 Weeks)
+
+### P1.1: Environment & Configuration Setup
+- [x] P1.1.1: Create GitHub repository (clone from Archon)
+- [x] P1.1.2: Set up virtual environment with Python 3.8+
+- [x] P1.1.3: Install required dependencies (LangGraph, Pydantic, LangChain)
+- [x] P1.1.4: Configure secure storage for API keys
+- [x] P1.1.5: Set up pre-commit hooks for code quality
+- [x] P1.1.6: Configure logging framework
+- [x] P1.1.7: Create project directory structure
+
+### P1.2: Define Initial State Model
+- [x] P1.2.1: Conduct state model design workshop
+- [x] P1.2.2: Define core Pydantic models for request handling
+- [x] P1.2.3: Create context and requirements models
+- [x] P1.2.4: Define research output models
+- [x] P1.2.5: Implement model validation rules
+- [x] P1.2.6: Document state model with usage examples
+
+### P1.3: Initialize LangGraph Graph
+- [x] P1.3.1: Create main application script
+- [x] P1.3.2: Implement StatefulGraph initialization
+- [x] P1.3.3: Set up entry point handling
+- [x] P1.3.4: Add basic logging for graph execution
+- [x] P1.3.5: Create utility functions for graph operations
+
+### P1.4: Implement Lead Orchestrator Node
+- [x] P1.4.1: Define orchestrator class/function structure
+- [x] P1.4.2: Implement initial routing logic
+- [x] P1.4.3: Create state preparation functions
+- [x] P1.4.4: Add orchestrator node to graph
+- [x] P1.4.5: Test orchestrator with mock state data
+
+### P1.5: Implement Context & Requirements Agent
+- [x] P1.5.1: Design prompt template for context gathering
+- [x] P1.5.2: Implement user interaction mechanism
+- [x] P1.5.3: Create response parsing logic
+- [x] P1.5.4: Add state update functionality
+- [x] P1.5.5: Add node to graph
+- [x] P1.5.6: Unit test with sample inputs
+- [ ] P1.5.7: Design mechanism for presenting follow-up questions to user (e.g., UI interaction)
+- [ ] P1.5.8: Implement logic to receive and process user responses to follow-up questions
+- [ ] P1.5.9: Update state with information gathered from follow-up responses
+- [ ] P1.5.10: Unit test context agent interaction loop
+
+### P1.6: Implement Research & Feasibility Agent
+- [x] P1.6.1: Design research prompt templates
+- [x] P1.6.2: Integrate web search tool
+- [x] P1.6.3: Implement response parsing for research data
+- [x] P1.6.4: Create research summary generation
+- [x] P1.6.5: Add state update logic
+- [x] P1.6.6: Add node to graph
+- [x] P1.6.7: Unit test with sample queries
+
+### P1.7: Define Initial Workflow Edges
+- [x] P1.7.1: Connect entry point to context agent
+- [x] P1.7.2: Connect context agent to orchestrator
+- [x] P1.7.3: Connect orchestrator to research agent
+- [x] P1.7.4: Connect research agent back to orchestrator
+- [x] P1.7.5: Add end point connection
+- [x] P1.7.6: Test graph traversal
+
+### P1.8: Basic End-to-End Test
+- [ ] P1.8.1: Create sample EUC assessment request
+- [ ] P1.8.2: Implement test execution script
+- [ ] P1.8.3: Add state inspection checkpoints
+- [ ] P1.8.4: Execute linear flow test (Verify Entry -> Context -> Orchestrator path)
+- [ ] P1.8.5: Document results and issues
+- [ ] P1.8.6: Fix critical bugs identified in basic E2E
+
+### P1.9: Refine State Model
+- [x] P1.9.1: Review state usage from initial agents
+- [x] P1.9.2: Identify missing fields or optimizations
+- [x] P1.9.3: Update Pydantic models
+- [x] P1.9.4: Test backward compatibility
+- [x] P1.9.5: Document state model changes
+
+## Phase 2: Specialist Agent Development (3-6 Weeks)
+
+### P2.1: Implement Solution Architect Agent
+- [x] P2.1.1: Define architecture state fields
+- [x] P2.1.2: Design architect prompt templates
+- [x] P2.1.3: Implement solution design logic
+- [x] P2.1.4: Create architecture output formatter
+- [x] P2.1.5: Add state update mechanisms
+- [x] P2.1.6: Add node to graph
+- [x] P2.1.7: Write unit tests
+
+### P2.2: Implement Security Analyst Agent
+- [x] P2.2.1: Define security state fields
+- [x] P2.2.2: Design security analysis prompts
+- [x] P2.2.3: Implement security assessment logic
+- [x] P2.2.4: Create risk scoring mechanism
+- [x] P2.2.5: Add compliance checking functionality
+- [x] P2.2.6: Add state update logic
+- [x] P2.2.7: Add node to graph
+- [x] P2.2.8: Write unit tests
+
+### P2.3: Implement Licensing Specialist Agent
+- [x] P2.3.1: Define licensing state fields
+- [x] P2.3.2: Design licensing analysis prompts
+- [x] P2.3.3: Implement license identification logic
+- [x] P2.3.4: Create compliance check functions
+- [x] P2.3.5: Add state update mechanisms
+- [x] P2.3.6: Add node to graph
+- [x] P2.3.7: Write unit tests
+
+### P2.4: Implement Implementation Engineer Agent
+- [x] P2.4.1: Define implementation state fields
+- [x] P2.4.2: Design implementation planning prompts
+- [x] P2.4.3: Create implementation plan generator
+- [x] P2.4.4: Add timeline estimation functionality
+- [x] P2.4.5: Implement resource requirement analysis
+- [x] P2.4.6: Add state update logic
+- [x] P2.4.7: Add node to graph
+- [x] P2.4.8: Write unit tests
+
+### P2.5: Implement Support & Operations Agent
+- [x] P2.5.1: Define support state fields
+- [x] P2.5.2: Design support analysis prompts
+- [x] P2.5.3: Implement support plan generator
+- [x] P2.5.4: Create operational impact assessment
+- [x] P2.5.5: Add state update mechanisms
+- [x] P2.5.6: Add node to graph
+- [x] P2.5.7: Write unit tests
+
+### P2.6: Implement User Experience & Enablement Agent
+- [x] P2.6.1: Define UX state fields
+- [x] P2.6.2: Design user experience analysis prompts
+- [x] P2.6.3: Implement training needs assessment
+- [x] P2.6.4: Create adoption planning functionality
+- [x] P2.6.5: Add change impact assessment
+- [x] P2.6.6: Add state update logic
+- [x] P2.6.7: Add node to graph
+- [x] P2.6.8: Write unit tests
+
+### P2.7: Implement Cost & Value Analyst Agent
+- [x] P2.7.1: Define cost/value state fields
+- [x] P2.7.2: Design financial analysis prompts
+- [x] P2.7.3: Implement TCO calculation logic
+- [x] P2.7.4: Create ROI estimation functionality
+- [x] P2.7.5: Add cost comparison mechanisms
+- [x] P2.7.6: Add state update logic
+- [x] P2.7.7: Add node to graph
+- [x] P2.7.8: Write unit tests
+
+### P2.8: Identify & Integrate Specialist Tools
+- [x] P2.8.1: Research available integration tools
+- [x] P2.8.2: Select appropriate tools for each agent
+- [x] P2.8.3: Implement knowledge base lookup tool (Consider Archon DB/RAG integration)
+- [x] P2.8.4: Create financial calculation tool
+- [x] P2.8.5: Integrate document analysis capability
+- [x] P2.8.6: Test tool integrations
+- [x] P2.8.7: Document tool usage
+
+### P2.9: Refine State Model
+- [x] P2.9.1: Consolidate all agent state requirements
+- [x] P2.9.2: Optimize state structure
+- [x] P2.9.3: Implement advanced validation rules
+- [x] P2.9.4: Update state documentation
+- [x] P2.9.5: Test state model with all agents
+
+## Phase 3: Workflow Integration & Testing (2-4 Weeks)
+
+### P3.1: Add All Agent Nodes to Graph
+- [ ] P3.1.1: Ensure all agent nodes are properly registered in main.py/graph_service.py
+- [ ] P3.1.2: Verify node configurations
+- [ ] P3.1.3: Test individual node execution (address existing unit test failures)
+- [ ] P3.1.4: Document node integration
+
+### P3.2: Define Standard Workflow Edges
+- [ ] P3.2.1: Map complete workflow connections
+- [ ] P3.2.2: Implement standard edge connections in main.py/graph_service.py
+- [ ] P3.2.3: Confirm and implement initial workflow path (e.g., Entry -> Context -> Orchestrator)
+- [ ] P3.2.4: Test simple path traversals
+- [ ] P3.2.5: Document workflow paths
+
+### P3.3: Implement Conditional Routing Logic
+- [ ] P3.3.1: Define state condition functions for flexible agent routing
+- [ ] P3.3.2: Implement conditional edge logic in LangGraph
+- [ ] P3.3.3: Add branching decision points (e.g., skip agents, parallel execution)
+- [ ] P3.3.4: Test conditional routing scenarios
+- [ ] P3.3.5: Document routing conditions
+
+### P3.4: Refine Orchestrator Routing Logic
+- [ ] P3.4.1: Update orchestrator agent with advanced routing capabilities
+- [ ] P3.4.2: Implement state preparation functions for different branches
+- [ ] P3.4.3: Add parallel execution management if needed
+- [ ] P3.4.4: Implement error handling for routing failures
+- [ ] P3.4.5: Test complex routing scenarios
+
+### P3.5: Integrate Archon Framework Features
+- [ ] P3.5.1: Decide: Use main.py direct execution OR Archon's graph_service.py?
+- [ ] P3.5.2: Evaluate using Archon refiner agents (prompt, tools, agent) on EUC agents
+- [ ] P3.5.3: Implement chosen refiner agent integration if applicable
+- [ ] P3.5.4: Evaluate using Archon MCP server for IDE integration
+- [ ] P3.5.5: Implement MCP integration if applicable
+- [ ] P3.5.6: Evaluate using Archon DB/RAG for knowledge base/research agent
+
+### P3.6: Develop End-to-End Test Cases
+- [ ] P3.6.1: Define "Deploy MS Teams Phone" test case
+- [ ] P3.6.2: Define "Evaluate new laptop model" test case
+- [ ] P3.6.3: Define "Migrate file shares to OneDrive" test case
+- [ ] P3.6.4: Create additional test cases covering different workflow paths
+- [ ] P3.6.5: Document test case expectations and setup
+
+### P3.7: Execute End-to-End Tests
+- [ ] P3.7.1: Create/refine test execution framework
+- [ ] P3.7.2: Add comprehensive state logging checkpoints
+- [ ] P3.7.3: Execute all defined E2E test cases
+- [ ] P3.7.4: Capture output reports and state progression
+- [ ] P3.7.5: Document test execution results
+
+### P3.8: Analyze Test Results & Identify Issues
+- [ ] P3.8.1: Review execution logs and state outputs
+- [ ] P3.8.2: Analyze agent outputs for accuracy and completeness
+- [ ] P3.8.3: Identify workflow logic bugs and inconsistencies
+- [ ] P3.8.4: Document bugs and improvement opportunities
+- [ ] P3.8.5: Prioritize fixes based on impact
+
+### P3.9: Debug and Iterate on Workflow/Agents
+- [ ] P3.9.1: Fix critical workflow bugs identified in P3.8
+- [ ] P3.9.2: Fix failing agent unit tests (address dependency issues, prompt errors, validation errors)
+- [ ] P3.9.3: Update agent prompts and logic based on E2E test analysis
+- [ ] P3.9.4: Optimize routing logic based on test results
+- [ ] P3.9.5: Re-run relevant unit and E2E tests with fixes applied
+- [ ] P3.9.6: Document changes and improvements made
+
+## Phase 4: Refinement, Documentation & Pilot (2-3 Weeks)
+
+### P4.1: Decide UI Strategy & Integrate
+- [ ] P4.1.1: Choose primary UI: Archon's streamlit_ui.py OR custom app.py OR other?
+- [ ] P4.1.2: Define integration points between UI and workflow (main.py / graph_service.py)
+- [ ] P4.1.3: Implement UI workflow triggering mechanism
+- [ ] P4.1.4: Implement results display in the chosen UI
+- [ ] P4.1.5: Test UI-backend integration
+
+### P4.2: Optimize Agent Prompts & Logic
+- [ ] P4.2.1: Review agent outputs for quality from E2E tests
+- [ ] P4.2.2: Refine prompts for clarity, precision, and robustness
+- [ ] P4.2.3: Optimize agent internal logic based on findings
+- [ ] P4.2.4: Improve output format consistency across agents
+- [ ] P4.2.5: Test optimized prompts and logic
+- [ ] P4.2.6: Document significant prompt/logic changes
+
+### P4.3: Implement Enhanced Error Handling
+- [ ] P4.3.1: Add robust exception handling within agent nodes
+- [ ] P4.3.2: Implement LLM call retry logic (consider using LangChain resilience features)
+- [ ] P4.3.3: Add validation checks for critical state updates
+- [ ] P4.3.4: Improve graph execution error reporting and handling
+- [ ] P4.3.5: Define and test error recovery scenarios
+- [ ] P4.3.6: Document error handling strategy
+
+### P4.4: Refine Final Report Generation
+- [ ] P4.4.1: Design final assessment report template
+- [ ] P4.4.2: Implement logic to consolidate state data into the report (dedicated agent or orchestrator step?)
+- [ ] P4.4.3: Add formatting, structure, and summarization to the report
+- [ ] P4.4.4: Ensure all key agent outputs are clearly represented
+- [ ] P4.4.5: Test report generation with various completed states
+- [ ] P4.4.6: Gather feedback on report format and content
+
+### P4.5: Write Code Documentation
+- [ ] P4.5.1: Add/update docstrings for all functions and classes
+- [ ] P4.5.2: Document classes, methods, and complex logic sections
+- [ ] P4.5.3: Add comments for non-obvious code sections
+- [ ] P4.5.4: Ensure type hints are accurate and complete
+- [ ] P4.5.5: Generate or update API documentation if applicable
+
+### P4.6: Write System & Usage Documentation
+- [ ] P4.6.1: Update README with accurate setup and execution instructions
+- [ ] P4.6.2: Document final system architecture (including UI, workflow, Archon components used)
+- [ ] P4.6.3: Write user guide for running assessments via the chosen UI
+- [ ] P4.6.4: Document EUC agent roles and capabilities
+- [ ] P4.6.5: Create troubleshooting guide for common issues
+- [ ] P4.6.6: Document configuration options (.env, config.py)
+
+### P4.7: Prepare for Pilot Testing
+- [ ] P4.7.1: Define pilot scope and objectives
+- [ ] P4.7.2: Identify pilot users/stakeholders
+- [ ] P4.7.3: Create clear user instructions for pilot testers
+- [ ] P4.7.4: Develop feedback collection mechanism (survey, interviews)
+- [ ] P4.7.5: Schedule pilot sessions and prepare test scenarios
+
+### P4.8: Conduct Pilot Tests
+- [ ] P4.8.1: Onboard pilot users and explain the process
+- [ ] P4.8.2: Execute pilot assessment sessions with defined scenarios
+- [ ] P4.8.3: Observe user interactions and pain points
+- [ ] P4.8.4: Collect real-time and post-session feedback
+- [ ] P4.8.5: Document pilot execution details and observations
+
+### P4.9: Gather and Analyze Pilot Feedback
+- [ ] P4.9.1: Consolidate all feedback data from pilot tests
+- [ ] P4.9.2: Analyze user experience issues and UI feedback
+- [ ] P4.9.3: Evaluate report quality, accuracy, and usefulness based on feedback
+- [ ] P4.9.4: Identify bugs and improvement opportunities reported by users
+- [ ] P4.9.5: Document feedback analysis and findings
+- [ ] P4.9.6: Prioritize adjustments based on pilot feedback
+
+### P4.10: Make Final Adjustments
+- [ ] P4.10.1: Implement critical usability improvements based on P4.9
+- [ ] P4.10.2: Refine prompts/logic/report based on feedback
+- [ ] P4.10.3: Fix any remaining critical issues identified during pilot
+- [ ] P4.10.4: Perform final round of testing
+- [ ] P4.10.5: Document final changes made post-pilot
+- [ ] P4.10.6: Prepare for potential release or next phase
+
+## Post-Release Activities
+
+### Documentation & Knowledge Transfer
+- [ ] Create maintenance documentation
+- [ ] Document known limitations
+- [ ] Schedule knowledge transfer sessions
+- [ ] Create training materials for new developers
+
+### Technical Debt & Future Enhancements
+- [ ] Document technical debt items
+- [ ] Create backlog for future enhancements
+- [ ] Prioritize next features
+- [ ] Plan for performance optimization
+- [ ] Upgrade Pydantic V1 style validators to V2 style (@validator to @field_validator and @root_validator to @model_validator)
+- [ ] Review and remove unused Archon framework components/code
